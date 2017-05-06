@@ -23,10 +23,59 @@ header-img: "img/our.JPG"
 
 <br>
 
-<br>
+    <style type="text/css">
+  #tag-cloud{
+    width:300px;
+    height:300px;
+    margin: 50px auto;
+  }
+</style>
+<div class="zzsc-container">
+  <div id='tag-cloud'></div>
+</div>
+<body>
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.svg3dtagcloud.min.js"></script>
+<script>
+  $( document ).ready( function() {
+    var entries = [ 
+      { label: '15级所有', url: 'http://www.ecohnoch.cn/about/', target: '_top' },
+      { label: '清明发车', url: 'http://www.ecohnoch.cn/comments/', target: '_top' },
+      { label: '论坛', url: 'http://www.ecohnoch.cn/2016/12/09/zpage14/', target: '_top' },
+      { label: '流星雨', url: 'http://www.ecohnoch.cn/2099/12/30/zzzscope/', target: '_top' },
+      { label: '待填充', url: 'http://www.ecohnoch.cn/2016/12/09/shuxue/', target: '_top' },
+      { label: '无比炫酷屌炸天', url: 'http://www.ecohnoch.cn/2016/12/09/yingyu/', target: '_top' },
+      { label: '猿总骚图', url: 'http://www.ecohnoch.cn/2016/12/21/zhishou5/', target: '_top' },
+      { label: 'mmp编不下去了', url: 'https://www.github.com/ecohnoch', target: '_top' }
+    ];
 
-<br>
+    var settings = {
 
-<br>
+      entries: entries,
+      width: 300,
+      height: 300,
+      radius: '65%',
+      radiusMin: 75,
+      bgDraw: true,
+      bgColor: 'transparent',
+      opacityOver: 1.00,
+      opacityOut: 0.05,
+      opacitySpeed: 6,
+      fov: 800,
+      speed: 0.8,
+      fontFamily: 'Oswald, Arial, sans-serif',
+      fontSize: '19',
+      fontColor: '#272727',
+      fontWeight: 'bold',//bold
+      fontStyle: 'normal',//italic 
+      fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+      fontToUpperCase: true
 
-<h2>还没有东西呢...等页面改进吧...</h2>
+    };
+
+    //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+    $( '#tag-cloud' ).svg3DTagCloud( settings );
+
+  } );
+  
+</script>
